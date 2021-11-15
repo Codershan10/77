@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Variables</title>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Variable declaration and hoisting</h1>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success">Check the console for outputs</li>
+            <li class="list-group-item list-group-item-secondary">var variables have their scope limited to a function, regardless where you declare them in it</li>
+            <li class="list-group-item list-group-item-info">let variables have a local scope. Hence, if you make them inside a loop, they won't be accessible outside</li>
+            <li class="list-group-item list-group-item-warning">const variables are used for declaring constants, their value can't be changed once set</li>
+            <li class="list-group-item list-group-item-danger">Accessing variables before they are called doesn't throw a error, the value is undefined</li>
+            <li class="list-group-item list-group-item-primary">You can access a function even before it is made</li>
+          </ul>
+        <div class="row my-5">
+            <div class="col-sm-4">
+                <button id="btn_1" onclick="loopOne()" class="btn btn-info"> Run LoopOne</button>
+            </div>
+            <div class="col-sm-4">
+                <button id="btn_2" onclick="loopTwo()" class="btn btn-info"> Run LoopTwo</button>
+            </div>
+            <div class="col-sm-4">
+                <button id="btn_3" onclick="constChange()" class="btn btn-info"> Run constChange</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <button id="btn_4" onclick="varChange()" class="btn btn-info"> Run varChange</button>
+            </div>
+            <div class="col-sm-4">
+                <button id="btn_5" onclick="letChange()" class="btn btn-info"> Run letChange</button>
+            </div>
+        </div>
+    </div>
+    
+<script src="app.js"></script>
+</body>
+</html>
